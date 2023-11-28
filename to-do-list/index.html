@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylestodo.css">
+    <script src="https://kit.fontawesome.com/c12c5cc89c.js"></script>
+    <title>Plan Your Trip</title>
+  </head>
+
+  <body>
+    
+    <!--home-page navigation and main topic-->
+    <div class="home-page">
+    <ul>
+      <li class="active"><a href="..\project.html">Home</a></li>
+      <li><a href="..\about-us\about-us.html">About Us</a></li>
+      <li><a href="">Visit</a>
+          <div class="sub-menu-1">
+          <ul>
+            <li class="sub-content"><a href="">Southern Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\Hambantota\project.html">Hambantota</a></li>
+                <li><a href="..\Matara\matara.html">Matara</a></li>
+                <li><a href="..\galle\galle.html">Galle</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Western Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\colombo\colombo.html">Colombo</a></li>
+                <li><a href="..\gampaha\gampaha.html">Gampaha</a></li>
+                <li><a href="..\kalutara\kalutara.html">Kalutara</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Central Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\kandy\kandy.html">Kandy</a></li>
+                <li><a href="..\matale\matale.html">Matale</a></li>
+                <li><a href="..\nuwara-eliya\nuwara-eliya.html">Nuwara Eliya</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Uva Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\badulla\badulla.html">Badulla</a></li>
+                <li><a href="..\moneragala\moneragala.html">Moneragala</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Sabaragamuwa Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\ratnapura\ratnapura.html">Ratnapura</a></li>
+                <li><a href="..\kegalle\kegalle.html">Kegalle</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">North Western Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\kurunegala\kurunegala.html">Kurunegala</a></li>
+                <li><a href="..\puttalam\puttalam.html">Puttalam</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">North Central Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\anuradhapura\anuradhapura.html">Anuradhapura</a></li>
+                <li><a href="..\polonnaruwa\polonnaruwa.html">Polonnaruwa</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Northern Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\jaffna\jaffna.html">Jaffna</a></li>
+                <li><a href="..\kilinochchi\kilinochchi.html">Kilinochchi</a></li>
+                <li><a href="..\mannar\mannar.html">Mannar</a></li>
+                <li><a href="..\mullaitivu\mullaitivu.html">Mullaitivu</a></li>
+                <li><a href="..\vavuniya\vavuniya.html">Vavuniya</a></li>
+              </ul>
+              </div>
+            </li>
+            <li class="sub-content"><a href="">Eastern Province</a>
+              <div class="sub-content-1">
+              <ul>
+                <li><a href="..\ampara\ampara.html">Ampara</a></li>
+                <li><a href="..\batticaloa\batticaloa.html">Batticaloa</a></li>
+                <li><a href="..\trincomalee\trincomalee.html">Trincomalee</a></li>
+              </ul>
+              </div>
+            </li>
+          </ul>
+          </div>
+      </li>
+      <li><a href="..\map\map.html">Map</a></li>
+      <li><a href="..\contact-us\contact-us.html">Contact Us</a></li>
+      <li><a href="index.html">To-do List</a></li>
+    </ul>
+  </div>
+
+  <div>
+    <h1 class="todo">PLAN YOUR TRIP AS YOU WISH</h1>
+  </div>
+  <div id="clock">
+    <script src="script1.js"></script></div>
+  <div id="app">
+    <h3>Add Your Favorite Places</h3>
+    <div class="container">
+      <input type="text" placeholder="Add Place" :style="{'background-color':color}" v-model="task" @keyup.enter="addTask">
+      <button @click="addTask">Add<i class="fas fa-plus"></i></button>
+    </div>
+    <br><br><br>
+
+    <ul class="list">
+      <li v-for="(t, index) in taskList" :key="index">{{ t }}<i @click="removeTask(index)" class="fas fa-times"></i></li>
+    </ul>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+  <script src="script.js"></script>
+<br>
+<br>
+  </body>
+</html>

@@ -1,0 +1,235 @@
+*
+{
+  padding: 0px;
+  padding: 0px;
+}
+.home-page{
+
+  text-align:center;  
+}
+
+body{
+  background-color: rgb(255, 255, 255);
+  font-family: sans-serif;
+}
+.home-page ul{
+  display: inline-flex;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+.home-page ul li {
+  width: 120px;
+  margin: 5px;
+  padding: 5px;
+}
+
+.home-page ul li a {
+  text-decoration: none;
+  color: rgb(23, 1, 49);
+  padding: 6px 13px;
+  font-weight: bold;
+  position: fixed;
+  background: #aaa;
+  height: 50px;
+  width: 150px;
+
+}
+
+.home-page ul li a.active,
+.home-page ul li a:hover{
+  background: #2f8a11;
+  border-radius: 2px;
+}
+
+.sub-menu-1{
+  display: none;
+}
+
+.home-page ul li:hover .sub-menu-1{
+  display: block;
+  position: fixed;
+  margin-top: 40px;
+  background: #aaa;
+  margin-left: 30px;
+  width: 250px;
+}
+
+.home-page ul li:hover .sub-menu-1 ul {
+  display: block;
+  margin: 5px;
+}
+
+.home-page ul li:hover .sub-menu-1 ul li {
+  width: 200px;
+  padding: 10px;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  border-radius: 0;
+  text-align: left;
+  height: 12px;
+}
+
+.home-page ul li:hover .sub-menu-1 ul li:last-child{
+  border-bottom: none;
+}
+
+.home-page ul li:hover .sub-menu-1 ul li a:hover{
+  color: #ffffff;
+}
+
+.sub-content-1{
+  display: none;
+}
+
+.sub-content:hover .sub-content-1{
+  position: absolute;
+  display: block;
+  margin-top: -15px;
+  margin-left: 180px;
+  background: #aaa;
+  height: 150px;
+  
+}
+
+.todo{
+  margin-top: 60px;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-family:cursive;
+  font-size: 50px;
+  background: linear-gradient(to right, #503421, #462c0b);
+  border-radius: 60px;
+}
+
+
+#clock{
+  margin-left: 950px;
+  margin-top: 10px;
+  color: rgb(132, 0, 255);
+}
+
+#app{
+  position: absolute;
+  height: 200px;
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -20%);
+  -webkit-transform: translate(-50%, -20%);
+  -moz-transform: translate(-50%, -20%);
+  -ms-transform: translate(-50%, -20%);
+  -o-transform: translate(-50%, -20%);
+  padding: 6px 14px;
+  background-color: #f5f6fa;
+  box-shadow: 2px 2px 20px rgba(0,0,0,0);
+  margin-bottom: 50%;
+}
+
+h3{
+  font-size: 28px;
+  color:#f87800;
+  letter-spacing: 1px;
+}
+
+.container{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input[type="text"]{
+  height: 46px;
+  width: 80%;
+  border: none;
+  font-size: 22px;
+  padding-left: 10px;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.container button{
+  height: 50px;
+  width: 100px;
+  border: none;
+  font-size: 20px;
+  background-color: #3498db;
+  color: #fff;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+}
+
+.container button:hover {
+  opacity: 0.86;
+}
+
+::placeholder {
+  color: #bdc3c7;
+}
+
+.container input[type="text"]:focus{
+  outline: none;
+  box-shadow: inset 2px 2px 6px rgba(0, 0, 0, 2);
+}
+
+.list{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+}
+
+.list li{
+  background-color: #3498db;
+  text-align: center;
+  height: 40px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 38px;
+  margin-top: 1px;
+  list-style: none;
+  position: relative;
+}
+
+.list li i{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 40px;
+  text-align: center;
+  line-height: 38px;
+  background-color: #e74c3c;
+  transition: all .2s linear;
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  -ms-transition: all .2s linear;
+  -o-transition: all .2s linear;
+  cursor: pointer;
+}
+
+.list li i:hover{
+  background-color: #c0392b;
+}
+
+#app{
+  margin-top: 150px;
+}
+
+@media screen and (max-width:720px){
+  body{
+    width: 400px;
+  }
+}
